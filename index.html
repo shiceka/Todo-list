@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>ToDoList</title>
+</head>
+<body>
+    <header>
+    <h1>To Do List</h1>
+    <form id="container">
+        <label for="subject">Subject: <input id="subject" type="text" name="subject" placeholder="Enter subject"></label>
+        <label for="description">Description: <input id="description" type="text" name="description" placeholder="Enter task description">
+        </label>
+        <button id="mySubmit" type="submit" onclick="mySubmit(event)">Submit</button>
+    </header>
+    </form> 
+    <div id="display" > 
+        <h2>List:</h2>
+        <section class="task">
+        <input id='text' type="text" placeholder='your tasks' readonly>
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+    </section>
+    </div>
+    <script src="./main.js"></script>   
+</body>
+</html>
