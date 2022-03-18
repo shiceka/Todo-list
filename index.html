@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./style.css">
     <title>ToDoList</title>
 </head>
 <body>
@@ -14,17 +14,33 @@
         <label for="subject">Subject: <input id="subject" type="text" name="subject" placeholder="Enter subject"></label>
         <label for="description">Description: <input id="description" type="text" name="description" placeholder="Enter task description">
         </label>
-        <button id="mySubmit" type="submit" onclick="mySubmit(event)">Submit</button>
-    </header>
+        <label for="date">Date: <input id='date' type="date"></label>
+        <button onclick="mySubmit(event)">Submit</button>
     </form> 
-    <div id="display" > 
+    <small id="message"></small>
+</header>
+    <h2>Display List:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Edit/Delete</th>
+            </tr>
+        </thead>
+        <tbody id="display1">
+           
+        </tbody>
+    </table>
+    <!-- <div id="display" > 
         <h2>List:</h2>
         <section class="task">
         <input id='text' type="text" placeholder='your tasks' readonly>
         <button class="edit">Edit</button>
         <button class="delete">Delete</button>
     </section>
-    </div>
+    </div> -->
     <script src="./main.js"></script>   
 </body>
 </html>

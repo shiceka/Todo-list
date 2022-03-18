@@ -19,9 +19,9 @@ input  {
     margin-right: 1rem;
     text-size-adjust: 1.5rem;
     font-weight: 700;
-    background-image: linear-gradient(to left,var(--pinkk),var(--purple));
-    /* -webkit-background-clip: text; */
-    -webkit-text-fill-color: transparent;
+    /* background-image: linear-gradient(to left,var(--pinkk),var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 #subject , #description ,#text{
     font-size: 1.25rem;
@@ -64,4 +64,16 @@ header {
   padding:  2rem 1rem;
   max-width:  100%;
   margin: 0 auto;  
+}
+#showMe {
+    padding-left: 6%;
+}
+#showMe1 {
+    padding-left: 8%;
+}
+#showMe2 {
+    padding-left: 8%;
+}
+#showMe3 {
+    padding-left: 15%;
 }
