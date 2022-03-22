@@ -7,6 +7,7 @@ const mySubmit = (event) => {
   let description = document.getElementById("description").value;
   let date = document.getElementById("date").value;
   
+  
   if (subject === "" || description === "" || date === "") {
     document.getElementById(
       "message"
@@ -17,27 +18,33 @@ const mySubmit = (event) => {
     ).innerHTML = `<h2 style ="color: green">Thanks for filling in all the inputs ;)</h2>`;
     formData.push(subject,description,date);
     myDisplay();
+    resetForm();
   }
+  
 };
-const myEdit = () =>{}
-const myDelete = () =>{}
 
-const myDisplay = () =>{
-    // let formOutput = {subject:subject.value, description:description.value, date:date.value}
-    // formData.push(formOutput);
-    // let ls = localStorage.setItem('To be done',JSON.stringify(formData))
-    
-    // let output = JSON.parse(localStorage.getItem('To be done'));
-    // console.log('output', output);
-    // output.forEach(function(element){
-        // for(let i = 0; i < output.length; i++){
-        
+const resetForm = () =>{
+  document.getElementById("container").reset()
+};
+
+const myEdit = () =>{}
+
+const myDelete = (event) =>{ 
+  let element = document.getElementById("row");
+  element.parentNode.removeChild(element);
+};
+
+const myDisplay = () =>{        
         document.getElementById('display1').innerHTML +=`
+        <tr id="row">
         <td id="showMe">${subject.value}</td>
         <td id="showMe1">${description.value}</td>
         <td id="showMe2">${date.value}</td>
-        <td id="showMe3"><button onclick = "myEdit()">Edit</button>
-        <button onclick = "myDelete()" >Delete</td>       
+        <td id="showMe3">
+        <button id="edit" onclick = "myEdit()">Edit</button>
+        <button id="del" onclick = "myDelete(event)" >Delete
+        </td>
+        </tr>       
         `
     
-}
+};
